@@ -1,4 +1,4 @@
-import paginated from 'paginated-redux';
+import paginated from '../services/paginatedRedux';
 import { GET_DATA_RECEIVED } from '../constants/DataServiceEvents';
 import {
   GOTO_PAGE,
@@ -28,7 +28,7 @@ const paginatedUsers = paginated(
   },
   {
     defaultSortOrder: 'asc',
-    defaultSortBy: 'email'
+    defaultSortBy: 'name.first'
   }
 );
 

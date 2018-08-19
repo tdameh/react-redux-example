@@ -6,6 +6,7 @@ import reducers from './reducers';
 import App from './components/App';
 import dataService from './services/dataService';
 import { GET_DATA } from './constants/DataServiceEvents';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
 const store = createStore(reducers, {}, applyMiddleware(dataService));

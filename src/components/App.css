@@ -1,0 +1,32 @@
+.hidden {
+  display: none;
+}
+
+.users-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.user {
+  border-radius: 5px;
+  border: 1px solid #c7c7c7;
+  margin: 5px 0px;
+  padding: 10px;
+}
+
+.user img {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.page-number {
+  float: left;
+}
+
+.page-navigator {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+}

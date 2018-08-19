@@ -6,7 +6,7 @@ import {
   GET_DATA_ERROR
 } from '../constants/DataServiceEvents';
 
-const api = 'https://randomuser.me/api?results=20';
+const api = 'https://randomuser.me/api?results=5000';
 
 const dataService = store => next => action => {
   next(action);

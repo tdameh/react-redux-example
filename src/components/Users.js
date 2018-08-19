@@ -3,19 +3,34 @@ import PropTypes from 'prop-types';
 import User from './User';
 
 const Users = ({ users, loading }) => (
-  <ul>
+  <div className="users-container row">
     {loading ? 'Loading...' : ''}
     {users.map(user => (
       <User key={user.id.value || Math.random()} {...user} />
     ))}
-  </ul>
+  </div>
 );
 
 Users.propTypes = {
   users: PropTypes.arrayOf(
     PropTypes.shape({
-      email: PropTypes.string.isRequired,
-      gender: PropTypes.string.isRequired
+      picture: PropTypes.shape({
+        large: PropTypes.string.isRequired,
+        medium: PropTypes.string.isRequired,
+        thumbnail: PropTypes.string.isRequired
+      }).isRequired,
+      name: PropTypes.shape({
+        first: PropTypes.string.isRequired,
+        last: PropTypes.string.isRequired
+      }).isRequired,
+      location: PropTypes.shape({
+        street: PropTypes.string.isRequired,
+        city: PropTypes.string.isRequired,
+        postcode: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+          .isRequired
+      }).isRequired,
+      cell: PropTypes.string.isRequired,
+      email: PropTypes.string.isRequired
     })
   )
 };

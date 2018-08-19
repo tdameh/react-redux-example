@@ -12,13 +12,20 @@ const Footer = ({
   prevPage
 }) => (
   <div className={loading ? 'hidden' : ''}>
-    {page} / {total}
-    <PageLink disabled={disabledPrev} onClick={() => prevPage()}>
-      PREV
-    </PageLink>
-    <PageLink disabled={disabledNext} onClick={() => nextPage()}>
-      NEXT
-    </PageLink>
+    <div>
+      <div className="page-number">
+        {page} / {total}
+      </div>
+      <div className="page-navigator">
+        <PageLink disabled={disabledPrev} onClick={() => prevPage()}>
+          &lt; prev
+        </PageLink>{' '}
+        &nbsp;
+        <PageLink disabled={disabledNext} onClick={() => nextPage()}>
+          next &gt;
+        </PageLink>
+      </div>
+    </div>
   </div>
 );
 
