@@ -3,6 +3,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
+Credits:
+- https://www.sohamkamani.com/blog/2016/06/05/redux-apis/
+- https://github.com/robmclarty/paginated-redux
+
 ## Table of Contents
 
 - [Updating to New Releases](#updating-to-new-releases)
